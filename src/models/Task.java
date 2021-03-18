@@ -29,6 +29,7 @@ public class Task {
     private String content;
 
     @Column(name = "created_at", nullable = false)
+
     private Timestamp created_at;
 
     @Column(name = "updated_at", nullable = false)
