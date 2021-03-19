@@ -50,6 +50,7 @@ public class UpdateServlet extends HttpServlet {
         //コミットすれば変更が反映されるからem.persist(m);は不要
         em.getTransaction().begin();
         em.getTransaction().commit();
+        request.getSession().setAttribute("flush", "更新が完了しました");
         em.close();
 
         //セッションスコープ上で不要になったデータを削除
